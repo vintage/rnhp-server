@@ -9,7 +9,7 @@ class MessageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Message
-        fields = ('id', 'content', 'author', 'likes_count')
+        fields = ('id', 'content', 'author', 'image', 'likes_count')
 
     def get_likes_count(self, obj):
         return obj.likes.count()

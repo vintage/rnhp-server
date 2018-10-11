@@ -1,6 +1,6 @@
 # RNHP server
 
-## Local development
+## Setup
 
 ```bash
 $ virtualenv .venv -p python3
@@ -11,3 +11,16 @@ $ ./manage.py migrate
 $ ./manage.py createsuperuser --username admin --email admin@example.com
 $ ./manage.py runserver
 ```
+
+## API
+
+1. List messages - GET [http://localhost:8000/api/v1/messages/](http://localhost:8000/api/v1/messages/)
+2. Create message - POST [http://localhost:8000/api/v1/messages/](http://localhost:8000/api/v1/messages/)
+3. Like message - POST [http://localhost:8000/api/v1/messages/likes/](http://localhost:8000/api/v1/messages/likes/)
+
+## Dashboard
+
+Admin available at [http://localhost:8000/admin/](http://localhost:8000/admin/)
+
+- Username: admin
+- Password: *the one set during setup phase*
