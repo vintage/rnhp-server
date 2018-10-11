@@ -16,7 +16,7 @@ $ ./manage.py runserver
 
 1. List messages - GET [http://localhost:8000/api/v1/messages/](http://localhost:8000/api/v1/messages/)
 2. Create message - POST [http://localhost:8000/api/v1/messages/](http://localhost:8000/api/v1/messages/)
-3. Like message - POST [http://localhost:8000/api/v1/messages/likes/](http://localhost:8000/api/v1/messages/likes/)
+3. Like message - POST [http://localhost:8000/api/v1/messages/1/likes/](http://localhost:8000/api/v1/messages/1/likes/)
 
 ## Dashboard
 
