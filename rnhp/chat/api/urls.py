@@ -7,6 +7,7 @@ app_name = 'chat'
 
 router = routers.SimpleRouter()
 router.register(r'messages', views.MessageViewSet)
+router.register(r'message-typings', views.MessageTypingViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

@@ -1,6 +1,18 @@
 from django.db import models
 
 
+class MessageTyping(models.Model):
+    author = models.CharField(max_length=30)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Message typing'
+        verbose_name_plural = 'Message typings'
+
+    def __str__(self):
+        return self.author
+
+
 class Message(models.Model):
     content = models.TextField()
     author = models.CharField(max_length=30)

@@ -17,6 +17,8 @@ $ ./manage.py runserver
 1. List messages - GET [http://localhost:8000/api/v1/messages/](http://localhost:8000/api/v1/messages/)
 2. Create message - POST [http://localhost:8000/api/v1/messages/](http://localhost:8000/api/v1/messages/)
 3. Like message - POST [http://localhost:8000/api/v1/messages/1/likes/](http://localhost:8000/api/v1/messages/1/likes/)
+4. Start typing - POST [http://localhost:8000/api/v1/message-typings/](http://localhost:8000/api/v1/message-typings/)
+5. Stop typing - DELETE [http://localhost:8000/api/v1/message-typings/mickiewicz/](http://localhost:8000/api/v1/message-typings/mickiewicz/)
 
 ## Dashboard
 

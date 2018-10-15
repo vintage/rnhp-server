@@ -1,3 +1,6 @@
+import datetime
+
+from django.utils import timezone
 from rest_framework import status
 from rest_framework import viewsets
 from rest_framework import decorators
@@ -24,4 +27,17 @@ class MessageViewSet(viewsets.ModelViewSet):
 
         return response.Response(
             serializer.errors, status=status.HTTP_400_BAD_REQUEST,
+        )
+
+
+class MessageTypingViewSet(viewsets.ModelViewSet):
+    queryset = models.MessageTyping.objects.all()
+    serializer_class = serializers.MessageTypingSerializer
+    lookup_field = 'author'
+
+    def get_queryset(self):
+        border_date = timezone.now() - datetime.timedelta(minutes=1)
+
+        return super().get_queryset().filter(
+            updated_at__gte=border_date,
         )
