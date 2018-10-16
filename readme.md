@@ -4,7 +4,7 @@
 
 ```bash
 $ virtualenv .venv -p python3
-$ source .env/bin/activate
+$ source .venv/bin/activate
 $ cd rnhp/
 $ pip install -r requirements.txt
 $ ./manage.py migrate
