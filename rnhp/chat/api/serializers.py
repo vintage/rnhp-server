@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from rest_framework import validators
+from drf_extra_fields import fields as extra_fields
 
 from chat import models
 
@@ -23,6 +24,7 @@ class MessageTypingSerializer(serializers.ModelSerializer):
 
 class MessageSerializer(serializers.ModelSerializer):
     likes_count = serializers.SerializerMethodField()
+    image = extra_fields.Base64ImageField()
 
     class Meta:
         model = models.Message
