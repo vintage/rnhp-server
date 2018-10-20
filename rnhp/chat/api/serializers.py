@@ -24,7 +24,7 @@ class MessageTypingSerializer(serializers.ModelSerializer):
 
 class MessageSerializer(serializers.ModelSerializer):
     likes_count = serializers.SerializerMethodField()
-    image = extra_fields.Base64ImageField()
+    image = extra_fields.Base64ImageField(required=False, allow_null=True)
 
     class Meta:
         model = models.Message
