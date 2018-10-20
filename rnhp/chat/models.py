@@ -8,6 +8,7 @@ class MessageTyping(models.Model):
     class Meta:
         verbose_name = 'Message typing'
         verbose_name_plural = 'Message typings'
+        ordering = ('-id',)
 
     def __str__(self):
         return self.author
@@ -21,6 +22,7 @@ class Message(models.Model):
     class Meta:
         verbose_name = 'Message'
         verbose_name_plural = 'Messages'
+        ordering = ('-id',)
 
     def __str__(self):
         return self.content
@@ -38,6 +40,7 @@ class MessageLike(models.Model):
         verbose_name = 'Message like'
         verbose_name_plural = 'Message likes'
         unique_together = (('message', 'author'),)
+        ordering = ('-id',)
 
     def __str__(self):
         return '{} +1'.format(self.author)
